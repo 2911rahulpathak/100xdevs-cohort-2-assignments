@@ -6,7 +6,29 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  const categoryTotal = {}; //Initialized an empty object to store the total spending for each category.
+  //Key -> Category Value -> total spending
+
+  for (let i = 0; i < transactions.length; i++) {
+    const transaction = transactions[i];
+    const { category, price } = transaction;
+    /* 
+    If it exists, add the price of the current transaction to the existing total.
+If it doesn't exist, create a new entry with the category and the price of the current transaction.
+    */
+    if (categoryTotal.hasOwnProperty(category)) {
+      categoryTotal[category] += price;
+    } else {
+      categoryTotal[category] = price;
+    }
+  }
+
+  const result = Object.keys(categoryTotal).map((category) => ({
+    category: category,
+    totalSpent: categoryTotal[category],
+  }));
+
+  return result;
 }
 
 module.exports = calculateTotalSpentByCategory;

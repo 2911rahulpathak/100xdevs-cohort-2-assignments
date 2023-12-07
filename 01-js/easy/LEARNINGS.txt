@@ -1,0 +1,4 @@
+1. How to split "String" -> sort it -> Join it 
+
+2. Converting Object into Array
+https://www.youtube.com/watch?v=9w0jQVI_JCY
