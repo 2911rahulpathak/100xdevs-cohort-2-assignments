@@ -32,3 +32,4 @@ If it doesn't exist, create a new entry with the category and the price of the c
 }
 
 module.exports = calculateTotalSpentByCategory;
+  
