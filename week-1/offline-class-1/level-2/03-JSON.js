@@ -15,3 +15,10 @@ const sampleJSONString =
   '{"key": "value", "number": 42, "nested": {"nestedKey": "nestedValue"}}';
 
 jsonMethods(sampleJSONString);
+
+
+/*  
+
+converting string -> object using JSON.parse()
+convert Object -> string -> JSON.stringify
+*/

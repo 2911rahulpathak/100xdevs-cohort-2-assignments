@@ -1,0 +1,53 @@
+Async & sync:
+
+First Gist: https://gist.github.com/hkirat/a75987a32fdfcab27672410930327f1a
+
+function findSum(n) {
+  let ans = 0;
+  for (let i = 0; i<n; i++) {
+    ans += i;
+  }
+  return ans;
+}
+
+function findSumTill100() {
+  console.log(findSum(100));
+}
+
+setTimeout(findSumTill100, 1000)
+console.log("hello world");
+
+
+
+
+setTimeout is an asynchronous func because -> 
+JS thread reaches ->findsum ->findSumTill100 ->then on line setTimeout It doesn't wait for 1 sec 
+
+It says -> cool I'll let you know after 1 sec -> Think of it as Kamla didi went to take ketchup(delegate the task to someone else)
+
+You gave this task of calling the function after 1 sec to someone else(delegate) & you will proceed to your line of code
+
+Thinking of why not sync : 
+think of boiling water example you are staring at the water till 5 mins then you'll open packet of maggie
+
+here you are not stopping to wait for 1 sec to give output -> Instead you delegate the task 
+
+
+
+
+
+
+Here setTimeout callback function has findSumTill100 function passed as an argument(that's why callback)
+& findSumTill100 -> call -> findsum 
+
+Once It computes the answer it reaches to setTimeout & displays the result after 1 sec 
+
+But how is this setTimeout() -> asynchronous??
+
+######################################################################################################
+
+What are some of common async functions?
+setTimeout
+fs.readFile -> read file from filesystem
+Fetch -> to fetch some data from an API endpoint
+(Things are delegated)

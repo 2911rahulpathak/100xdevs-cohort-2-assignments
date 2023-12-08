@@ -2,3 +2,69 @@
 
 2. Converting Object into Array
 https://www.youtube.com/watch?v=9w0jQVI_JCY
+
+
+Callback:
+function square(n) {
+  return n * n;
+}
+
+function cube(n) {
+  return n * n * n;
+}
+
+function sumOfSquare(a, b) {
+  //here taking paramater a & b and parameter are being send to other func
+  const val1 = square(a);
+  const val2 = square(b);
+
+  return val1 + val2;
+}
+// Is DRY being violated here?
+function sumOfCubes(a, b) {
+  //here taking paramater a & b and parameter are being send to other func
+  const val1 = cube(a);
+  const val2 = cube(b);
+
+  return val1 + val2;
+}
+
+const ans = sumOfCubes(1, 2); // calling func
+console.log(ans);
+
+/* 
+function square(a){
+return a*a;
+}
+
+function sumOfSomething(a,b,func){
+const val1 = func(a);
+const val2 = func(b); //function calling back another func
+
+return val1+val2;
+}
+sumOfSomething(a,b,square) //passing func to another func
+(it also passes arguments)
+
+*/
+
+
+/* 
+
+Anonymous callbacks
+//A func that do not have a name
+whenever you passs a function directly you don't name it 
+  natively to another function -> like this 
+
+  const ans= sumOfSomthing(2,2,function cube(n) {
+       return n * n * n;
+ })
+
+
+you dont name it you just pass it (mainly even if you name it you can't call it outside(scoping so write it without name))
+ const ans= sumOfSomthing(2,2,function(n) {
+       return n * n * n;
+ })
+
+
+ */
