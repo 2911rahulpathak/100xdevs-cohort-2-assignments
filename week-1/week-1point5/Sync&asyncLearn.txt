@@ -26,6 +26,9 @@ JS thread reaches ->findsum ->findSumTill100 ->then on line setTimeout It doesn'
 It says -> cool I'll let you know after 1 sec -> Think of it as Kamla didi went to take ketchup(delegate the task to someone else)
 
 You gave this task of calling the function after 1 sec to someone else(delegate) & you will proceed to your line of code
+###
+When the thread becomes idle after executing everything is the time when it will finally reach in the pending callback
+###
 
 Thinking of why not sync : 
 think of boiling water example you are staring at the water till 5 mins then you'll open packet of maggie
@@ -50,4 +53,5 @@ What are some of common async functions?
 setTimeout
 fs.readFile -> read file from filesystem
 Fetch -> to fetch some data from an API endpoint
-(Things are delegated)
+(Things are delegated & when it is done it will call a callback )
+
