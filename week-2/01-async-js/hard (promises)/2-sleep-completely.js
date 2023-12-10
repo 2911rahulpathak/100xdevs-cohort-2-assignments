@@ -3,6 +3,18 @@
  * During this time the thread should not be able to do anything else.
  */
 
-function sleep (seconds) {
-
+function delay(milliseconds) {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve();
+      
+    }, milliseconds);
+  });
 }
+
+// Example: Halting the thread for 3 seconds
+console.log("Start");
+delay(5000).then(() => {
+  console.log("End");
+});
+console.log("enneeene")
