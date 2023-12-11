@@ -1,0 +1,66 @@
+ECMAScript ->scripting language specification on which JS is based 
+
+Common JS browser engines: V8(Chrome), SpiderMonkey(Firefox)
+
+Some smart people took-> 
+V8 engine Added some backend things(filesystem reads) on top.
+To create a new runtime to run JS in backend(compete with BE langaugae)
+
+What can you do with Node.js?
+1. Create clis
+2. Create a video player
+3. Create a game
+4. Create an HTTP Server(Main focus)
+
+
+(History)
+
+What is HTTP(Hyper text transfer protocol) -> 
+1. A protocol that is defined for machines to communicate (EG: phone calls)
+2. Specifically for websites, it is the most common way for your 
+website’s frontend to talk to its backend(2 computers communicate)
+
+What is HTTP Server?
+
+How frontened talks to backend(High overview): lots of wires & routers
+
+Some code that follows the HTTP Protocol 
+And is able to communicate with clients (browsers/mobile apps…)
+Think of it to be similar to the call app in your phone 
+Which lets you communicate with your friend
+
+HTTP protocol:
+idealogy:
+Client -> server 
+Server doing something & responding back -> client 
+
+
+functions:
+1)arguments are something the client sends
+2) Rather than calling func using name, the client uses URL
+
+
+#################################################################################################
+
+Things that client needs to worry(Client side):
+1. Protocol(HTTP/HTTPS)
+2. Address (URL/IP/PORT)
+3. Route
+4. Headers Body Query Parameters
+5.Method(Get/Post)
+
+
+Header-> Authetication Info(Cookie)
+Body->what ever you are passing -> to do Backend 
+Method -> Get/Post 
+
+
+#################################
+Things that Server needs to worry(Server Side)
+1. Response Header 
+2. Response Body 
+3. Status Code 
+
+
+
+
