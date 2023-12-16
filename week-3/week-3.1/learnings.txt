@@ -1,0 +1,8 @@
+Databases(NoSQl/SQl)
+
+One NoSQL database -> MongoDB
+//copy connection string 
+
+Cloud postgres URL -> neonDB
+
+Cookie: https://www.youtube.com/watch?v=SqJqtXjkBts
