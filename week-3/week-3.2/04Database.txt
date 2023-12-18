@@ -1,0 +1,58 @@
+In-memory Objects -> No no 
+Use Databases
+
+CLuster of Backend server & either distributed/single database
+
+Backend server ->
+selective data from database 
+
+Types of databases:
+Graph,vector,SQL(opensource codebases),Nosql
+
+for now NoSQL -> MongoDB
+
+MongoDB:
+1.create multiple databases
+2.In each database,create TABLES (collections)
+3. In each table, it lets you dump JSON data
+4. It's schemaless
+5. It scales well & is decent choice for most use cases
+
+In SQL-> strict Schema
+
+
+
+How does Backend connect to Databases:
+Using Libraries
+1. Express lets u create an HTTP server
+2. Jsonwebtokens library lets you create jwts 
+3. Mongoose(one of the libraries) lets you connect to your database
+
+
+
+Sign up(take dataa):
+{"username":"Rahul,
+"password":"123"
+}
+send it to backend server -> Put it into database(Provided same username doesn't exists)
+
+Sign In:
+backend needs to check-> does the user exists & password correct -> 
+we return back the JWT 
+
+/users: 
+expect a header that user sends (JWT) -> Backend -> Hit the database get the data 
+
+
+Moongose says:  what your model/schema looks like
+
+I provide this on top of MongoDB -> Validation(describe teh schema)
+
+High level: You can use Either, but we'll be using $$$ prisma(ORM) $$$
+
+Object stores(S3) -> Photos
+
+
+for expiry JWT:
+
+jwt.sign(name:"dc",expiresAt:new Date().getTime())

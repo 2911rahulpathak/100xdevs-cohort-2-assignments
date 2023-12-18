@@ -1,0 +1,50 @@
+
+Let people sign up to your website
+Only allow signed in users to see people (create
+a dummy people list)
+Authenticated -> only signed in people
+
+
+Before that:
+
+1. Hashing: why do we hash passwords when you login to a website & hashed password is stored in Databases
+converting a string into gibberish(Can never decrypt back)
+
+conver the incoming pass -> hash & compare the hash with Databases
+
+2. Encryption: 2 way (provided you have a key)
+eg:Facebook images are encrypted & then encrypted thing is pasted in Databases
+WHen you fetch that -> first decrypt & then get back to you
+
+3.JSON Web Token(JWT):
+
+a) some hashing function but It only works for JSON input 
+{name:"Rahul"} -> It gives you a very long string
+b) token : It takes input & creates a Token(long string)
+
+who ever has this o/p string(token) can actually see the input: jwt.io 
+Not protected/Hashed 
+
+Why?? -> People who created it created it 
+
+Chatgpt -> auth-> bearer and long string(JWT)
+Copy & paste jwt.io -> see original JSON that was hashed in PAYLOAD(DATA)
+
+## convertion anyone can do but there is verification that only server can do (private/secret key)
+
+{name:"something input"} -> pass this through jwt.encode() & gave a passowrd(only server DB) -> JWT
+So given this JWT & password we can pass it and verify it using jwt.verify() function
+
+
+Backend will always verify
+
+
+when did you got back JWT token? after singning up -> req in the res it came 
+
+How is it relayed back,where is this token stored? 
+Local storage in Application & we send Header 
+
+
+Also we can do it with cookies  -> This is local storage way of doing Authentication
+
+JWT's saves you a database call when we want to verify the user

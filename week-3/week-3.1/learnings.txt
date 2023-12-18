@@ -6,3 +6,14 @@ One NoSQL database -> MongoDB
 Cloud postgres URL -> neonDB
 
 Cookie: https://www.youtube.com/watch?v=SqJqtXjkBts
+
+app.use() -> Middleware
+const app=express()
+app.use(express.json())  -> get post Body parameters
+express.json() -> Middleware is going to be called everywheree  
+the  use console.log(req.body) -> specify json type from body & not text,raw etc
+
+
+
+just write -> app.use(Middleware) -> any req comes to any route
+any req comes below this 
