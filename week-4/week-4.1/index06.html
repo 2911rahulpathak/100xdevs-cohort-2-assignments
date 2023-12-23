@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      async function populateDiv() {
+        //Fetching value from backend server
+        //Fetch function
+        const interest = document.getElementById("num1").value;
+        const principal = document.getElementById("num2").value;
+        const rate = document.getElementById("num3").value;
+        const res = await fetch(
+          "https://sum-server.100xdevs.com/interest?=" +
+            interest +
+            "&principal=" +
+            principal +
+            "&time=" +
+            rate
+        );
+        const value = await res.text(); //when output is text use text() when json json()
+
+        document.getElementById("finalSum").innerHTML = value; //it got rendered
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      oninput="populateDiv()"
+      id="num1"
+      type="text"
+      placeholder="first number"
+    />
+    <br /><br />
+    <input
+      oninput="populateDiv()"
+      id="num2"
+      type="text"
+      placeholder="second number"
+    /><br /><br />
+    <input oninput="populateDiv()" type="text" placeholder="num3" />
+    <button onclick="populateDiv()">Calculate sum</button> <br /><br />
+    <!-- Add it dynamically-->
+    <div id="finalSum"></div>
+  </body>
+</html>

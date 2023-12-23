@@ -1,0 +1,40 @@
+<!-- How to stop & send request instead of sending req again & again-->
+<html>
+    <script>
+
+        function debouncePopulateDiv(){
+            //wait for 100 millisecond 
+            //delay the call to populateDiv until I have not been called for 100 milliseconds
+            
+            
+            const timeout = setTimeout(function(){
+                populateDiv()
+            },100)
+clearTimeout(timeout)
+        }
+
+       async function populateDiv() {
+            const a = document.getElementById("firstNumber").value;
+            const b = document.getElementById("secondNumber").value;
+            
+           // element.innerHTML = parseInt(a) + parseInt(b);
+            // string => number
+            // "1111" => 1111
+            // interest?principal=100&rate=5&time=2
+            const res = await fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" +b)
+            const value = await res.text();
+            document.getElementById("finalSum").innerHTML= value;
+        }
+    </script>
+    <body>
+        <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="First number"></input> <br></br>
+        <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="Second number"></input> <br></br>
+        <div id="finalSum"></div>
+    </body>
+</html>
+
+
+<!--  
+Debouncing & throatling
+
+-->

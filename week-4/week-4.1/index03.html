@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function populateDiv() {
+        //control reaches when button is clicked
+        //use global document object using which you can manipulate the dom
+        /*const element = document.getElementById("finalSum");
+        console.log(element); -> this is document Object 
+        It's a reference to that HTMl -> DOM element(Object)
+        */
+        const element = document.getElementById("finalSum");
+        
+        element.innerHTML = "hello world"; //it got rendered 
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="first number" /> <br /><br />
+    <input type="text" placeholder="second number" /><br /><br />
+    <button onclick="populateDiv()">Calculate sum</button> <br /><br />
+    <!-- Add it dynamically-->
+    <div id="finalSum"></div>
+  </body>
+</html>

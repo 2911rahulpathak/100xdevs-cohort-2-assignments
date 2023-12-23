@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function populateDiv() {
+        //Fetching value from the input continously
+        const a = document.getElementById("num1").value;
+        const b = document.getElementById("num2").value;
+        const element = document.getElementById("finalSum");
+
+        element.innerHTML = parseInt(a) + parseInt(b); //it got rendered
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      oninput="populateDiv()"
+      id="num1"
+      type="text"
+      placeholder="first number"
+    />
+    <br /><br />
+    <input
+      oninput="populateDiv()"
+      id="num2"
+      type="text"
+      placeholder="second number"
+    /><br /><br />
+    <button onclick="populateDiv()">Calculate sum</button> <br /><br />
+    <!-- Add it dynamically-->
+    <div id="finalSum"></div>
+  </body>
+</html>
