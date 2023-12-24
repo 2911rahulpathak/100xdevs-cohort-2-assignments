@@ -1,0 +1,34 @@
+<!-- Dynamic content 
+we can use -> document.write(element) to directly write it to our dom eg: Date
+
+SetAttribute
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .democlass {
+      color: red;
+    }
+  </style>
+  <body>
+    <h1 id="myH1">The element Object</h1>
+    <h2>The setAttribute() Method</h2>
+
+    <p>Click "Add class " to add class attribute to h1 element</p>
+
+    <button onclick="myFunction()">Add class</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myH1").setAttribute("class", "democlass");
+        //can also setAttribute("type","button"} -> change input type to button
+        //instead of updating styles using setAttribute 
+        //go for element.style.backgroundColour="xyz"
+    </script>
+  </body>
+</html>

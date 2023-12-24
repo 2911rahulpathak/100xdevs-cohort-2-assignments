@@ -1,16 +1,16 @@
 <!-- How to stop & send request instead of sending req again & again-->
 <html>
     <script>
-
+        let timeout;
         function debouncePopulateDiv(){
             //wait for 100 millisecond 
             //delay the call to populateDiv until I have not been called for 100 milliseconds
             
-            
+            clearTimeout(timeout)
             const timeout = setTimeout(function(){
-                populateDiv()
-            },100)
-clearTimeout(timeout)
+                populateDiv() 
+            },100) //if during this 100 milliseconds again debounce is called then close this timer & start new timer
+ //1:37
         }
 
        async function populateDiv() {
