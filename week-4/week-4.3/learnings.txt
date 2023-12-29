@@ -1,0 +1,12 @@
+Databases usually allow access to 4 primitives
+Create
+Read
+Update
+Delete
+Popularly known as CRUD
+
+Prisma (ORM) used rn
+
+For learning -> Mongoose 
+
+First thing to define -> Schema
