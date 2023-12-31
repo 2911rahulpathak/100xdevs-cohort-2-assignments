@@ -55,3 +55,23 @@ fs.readFile -> read file from filesystem
 Fetch -> to fetch some data from an API endpoint
 (Things are delegated & when it is done it will call a callback )
 
+
+
+###################################
+function new1() {
+  return new Promise(function (resolve) {
+    //inside promise ->async tasks
+    setTimeout(function () {
+      resolve("new");
+    }, 1000);
+  });
+}
+
+async function name2() {
+  const value = await new1();
+  console.log(value);
+  console.log("below await value");
+}
+name2();
+
+console.log("end");

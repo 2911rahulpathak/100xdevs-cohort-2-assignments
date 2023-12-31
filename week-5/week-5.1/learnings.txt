@@ -1,0 +1,25 @@
+Static -> whos HTML doesn't changes as time goes by 
+
+For dynamic websites -> these libraries make it easier to do DOM manipulation
+
+React is a new syntax that under the hood gets converted to HTML,CSS,JS 
+
+You as a dev write it in React and browser unders HTML,CSS & JS(Under the hood React compiler converts your code -> HTML,CSS & JS)
+
+
+#################################################################################
+to Create a React app, you usually need to worry about 3 things:
+1.Components
+2.State
+3.Re-rendering
+
+STate-> The thing that is changing in the full site(State is the object that represents the current state of app)
+YOU MAINTAIN A STATE -> WHICH REPRESENTS YOUR DYNAMIC BITS & U JUST HAVE TO UPDATE THE STATE
+
+React says : Give me components & the current state and it will update under the hood
+
+#####################################################################
+You usually have to define all your components once
+And then all you have to do is update the state of your app, React takes care of re-rendering your app(Virtaul dom)
+###################################################################################
+

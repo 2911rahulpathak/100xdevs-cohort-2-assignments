@@ -17,6 +17,16 @@ app.get("/", function (req, res) {
   //when you implement res -> so goes to client side
 });
 
+app.post("/conversation", function (req, res) {
+  //console.log(req.headers)
+
+  //to get body ->  req.body
+  //console.log(req.body); //body parser library
+  /* app.use(bodyParser.json())  */
+  app.use(express.json());
+  res.send("Hii");
+});
+
 app.listen(PORT, function () {
   console.log("hello world");
 }); //should not stop keep on listening to these requests from clients

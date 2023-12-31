@@ -50,3 +50,7 @@ app.use(function (req, res) {
 /*  
 
 */
+
+
+res.send() or res.json({name:"rahul",age:20})
+
