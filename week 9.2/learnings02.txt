@@ -1,0 +1,54 @@
+In jS 
+function greet(firstName){
+    console.log("Hello" +firstName);
+}
+greet("Rahul");
+
+firstName ko you explicitly tell any =  (firstName:any)
+
+
+function greet(firstName: string){
+    console.log("Hello" +firstName);
+}
+greet("Rahul");
+
+
+//here it does type inference 
+function sum(a:number,b:number){
+    return a+b;
+}
+sum(12,22);
+
+//here one more thing to know is what does the function returns here:
+function sum1(a:number,b:number):number{
+    return a+b;
+}
+sum1(12,22);
+//here as function itself returns number ->
+
+//isLegal function 
+function isLegal(age:number){
+    if(age>18){
+        return true
+    }else{
+        return false;
+    }
+}
+
+
+passing function to another function: 
+
+
+here function passed has no argument therefore ()empty   
+function runAfter1S(fn:()=>void){
+    setTimeout(fn,1000);
+}
+runAfter1S(function(){
+    console.log("Hi there")
+})
+
+###################################################
+rootDir:
+Where should the compiler look for .ts files.
+
+create a src folder where you write all ts code 

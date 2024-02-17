@@ -1,0 +1,2 @@
+Interfaces:
+How can you assign types to objects?
