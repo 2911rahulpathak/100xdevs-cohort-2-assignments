@@ -1,0 +1,10 @@
+Enum -> enumerations in Typescript 
+you define a set of named constraints
+
+function doSomething(keyPressed) {
+	// do something.
+}
+
+
+
+

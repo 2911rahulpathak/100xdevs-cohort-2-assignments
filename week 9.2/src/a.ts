@@ -1,31 +1,19 @@
-interface User{
-    firstName:string,
-    lastName:string,
-    age:number,
-    email?: string,  //? means optional
-};
-
-// function isLegal(user:{
-//     firstName:string,
-//     lastName:string,
-//     age:number,
-// }){
-// if(user.age>18){
-//   return true;
-// }else{
-//     return false;
-// }
-// }
-function isLegal(user:User){
-if(user.age>18){
-  return true;
-}else{
-    return false;
-}
+//named constraints
+// one of the way ->type KeyInput = "up"|"down"|"left"|"right";
+//enum is iteration over some constant values (human readable)
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right
 }
 
-isLegal({
-    firstName:"rahul",
-    lastName:"pathak",
-    age:19,
-})
+
+//writing KeyInput besides keypressed
+function doSomething(keyPressed: Direction) {
+	// do something.
+}
+
+doSomething(Direction.Up);
+doSomething(Direction.Down);
+

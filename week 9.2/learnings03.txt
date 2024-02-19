@@ -1,2 +1,68 @@
 Interfaces:
 How can you assign types to objects?
+
+interface User{
+    firstName:string,
+    lastName:string,
+    age:number,
+    email?: string,  //? means optional
+};
+
+// function isLegal(user:{
+//     firstName:string,
+//     lastName:string,
+//     age:number,
+// }){
+// if(user.age>18){
+//   return true;
+// }else{
+//     return false;
+// }
+// }
+function isLegal(user:User){
+if(user.age>18){
+  return true;
+}else{
+    return false;
+}
+}
+
+isLegal({
+    firstName:"rahul",
+    lastName:"pathak",
+    age:19,
+})
+
+1)one small difference between interface and types is that when you use Interfaces you can implement interfaces in class
+2) interface User {
+
+}
+
+But in Type 
+type User = {
+    firstName: string,
+    lastName: string,
+    age: number
+}
+
+
+
+
+
+// type User = {
+//     firstName: string,
+//     lastName: string,
+//     age: number
+// }
+
+type GreetArg = number | string;
+
+//assign id: GreetArg
+
+//Either do this or create the above type
+function greet(id: (number | string) ){
+
+}
+//It give you union -> either  a number or a string 
+greet("1");
+greet(1);
