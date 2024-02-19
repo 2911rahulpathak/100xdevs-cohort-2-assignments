@@ -1,0 +1,26 @@
+Ref: https://daily-code-web.vercel.app/tracks/YOSAherHkqWXhOdlE4yE/sql-1
+
+SQl databases store data in form of rows
+example: mySQL,Postgress
+
+what is schemaless(NoSQl->MongoDB):
+Different rows can have Different schema (keys/types)
+
+Why SQL?
+Define your schema(shape of app)
+Put data that follows the schema
+Update the schema as your app changes and perform migrations(from now on you have another column)
+
+1)bring up your database (the way we did it in MongoDb)
+2) Tell the schema 
+3) Put the data
+4) If Application grows Updates schema
+
+you want type checking on Database 
+
+Your Postgress connection String:
+Postgresql://username:password@host/database 
+
+We can use psql cli -> Its similar to mongoose for MongoDb but It is used in terminal
+
+or pg which is a Node.js library  
