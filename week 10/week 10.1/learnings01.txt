@@ -19,8 +19,39 @@ Update the schema as your app changes and perform migrations(from now on you hav
 you want type checking on Database 
 
 Your Postgress connection String:
-Postgresql://username:password@host/database 
+Postgresql://username:password@host/database  ->(we can have more than 1 database at one host) 
 
 We can use psql cli -> Its similar to mongoose for MongoDb but It is used in terminal
 
 or pg which is a Node.js library  
+
+#####################################################################################
+A single database can have multiple tables inside
+
+One single SQL Database blocks
+Inside which we have -> Users Table,Todos Table, Admins Table
+
+until now we created database now lets create a schema 
+
+
+######################################################################################
+SQl -> Structured Query language
+
+To talk to sql database 
+
+Create a table :
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+property -> VARCHAR -> variable characters (50) -> Maximum length -> 50 should be unique for each row Should not be NULl 
+
+property -> SERIAL: A PostgreSQL-specific data type for creating an auto-incrementing integer (The way in Mongodb after we inserted data It gave it an id )
+
+property -> PRIMARY KEY -> it uniquely identifies each row
+
+everything defined above is Strict 
