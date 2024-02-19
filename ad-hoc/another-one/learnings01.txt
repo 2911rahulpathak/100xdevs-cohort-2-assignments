@@ -1,0 +1,9 @@
+For every Folder using NextJs has 2 things: 
+Layout(Big box wrapper) & Page(Content serve)
+
+
+In Layout 
+there is Children
+Children are coming from Page.tsx
+
+Frameworks have strict rules( eg: folder,file name ) <-> Library also has but light 
