@@ -1,0 +1,8 @@
+Ref: https://slides.com/harkiratsingh-2/week-10-2/
+
+1)Waterfalling:
+Few flashes Initial load of React App 
+
+2)Not SEO Optimized
+
+3)SSR

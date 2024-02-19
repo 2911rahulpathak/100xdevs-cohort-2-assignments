@@ -48,3 +48,10 @@ WHERE u.id = YOUR_USER_ID;
 
 
 eg: Swiggy/Zomato you need user Info + addresses 
+
+
+Running a query: 
+
+SELECT id,Username,email 
+FROM users
+WHERE id = YOUR_USER_ID 
