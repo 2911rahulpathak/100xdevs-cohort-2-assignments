@@ -7,3 +7,7 @@ there is Children
 Children are coming from Page.tsx
 
 Frameworks have strict rules( eg: folder,file name ) <-> Library also has but light 
+
+The good thing here in NextJs is we dont need to download external routes packages 
+
+Here inside layout.tsx if you have h2 tag just above children It will be taken out on every single page 
