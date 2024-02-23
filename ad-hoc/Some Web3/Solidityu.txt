@@ -1,0 +1,16 @@
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.9;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+contract Dappcord is ERC721 {
+    //Code here
+    //This contract acts as a Non-Fungible Token Contract that acts as permissions to view our Discord Server
+    //How NFTS should work etc -> using ERC721 standard
+    constructor(
+        string memory _name,
+        string memory _symbol
+    ) ERC721(_name, _symbol) {
+        //we just wanna pass name & symbol to the contract that we are inheriting from
+    }
+}

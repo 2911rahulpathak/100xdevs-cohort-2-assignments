@@ -1,0 +1,25 @@
+const { expect } = require("chai");
+
+const tokens = (n) => {
+  return ethers.utils.parseUnits(n.toString(), "ether");
+};
+
+describe("Dappcord", () => {
+  describe("Deployment", () => {
+    it("Sets the name", async () => {
+      const Dappcord = await ethers.getContractFactory("Dappcord");
+      dappcord = await Dappcord.deploy("Dappcord", "DC");
+      let result = await dappcord.name();
+      expect(result).to.equal("Dappcord");
+      result = await dappcord.symbol();
+      expect(result).to.equal("DC");
+    });
+
+    it("Sets the Symbol", async () => {
+      const Dappcord = await ethers.getContractFactory("Dappcord");
+      dappcord = await Dappcord.deploy("Dappcord", "DC");
+      result = await dappcord.symbol();
+      expect(result).to.equal("DC");
+    });
+  });
+});
