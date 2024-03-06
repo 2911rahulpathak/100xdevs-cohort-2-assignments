@@ -1,0 +1,10 @@
+https://projects.100xdevs.com/tracks/eooSv7lnuwBO6wl9YA5w
+
+
+AWS -> CLoud provider  
+eg: AWS has a very big data server in U.S/India and over there we can rent a small server & deploy code 
+
+No worry -> If no visits happen ->0 cost
+A server up and running always -> Me paying only wen someone visits the website 
+
+(Base cost even if no one is visiting your website: In case of AWS/GCP/AZURE)
