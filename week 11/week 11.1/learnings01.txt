@@ -8,3 +8,19 @@ No worry -> If no visits happen ->0 cost
 A server up and running always -> Me paying only wen someone visits the website 
 
 (Base cost even if no one is visiting your website: In case of AWS/GCP/AZURE)
+
+Here Serverless doesn't mean -> No server
+It means you as a developer don't need to worry about the server 
+
+Cold start problem:
+When no one uses-> No pay 
+Suddenly 1000 people visiting & now it needs to quickly bring up the server 
+
+
+Famous Serverless Providers:
+1. AWS Lambda 
+2. Google Cloud Functions
+3. Cloudfare Workers
+
+pegoho8252@comsb.com
+12345678@

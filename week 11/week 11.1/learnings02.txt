@@ -1,0 +1,8 @@
+
+Follow the steps: https://projects.100xdevs.com/tracks/eooSv7lnuwBO6wl9YA5w/serverless-7
+
+Wrangler -> Technically the CLI of cloudfare 
+we are not worrying about app.get() logic yet there is no express or node dependency
+
+We write the code without using express
+and we can get access to request object but it gets harder as the application grows so there are libraries
