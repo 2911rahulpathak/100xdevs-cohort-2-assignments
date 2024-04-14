@@ -1,0 +1,20 @@
+Middlewares are mostly used for Prechecks:
+There are 2 types of Prechecks: 
+1) Authentication ->Make sure that the person is logged in to eg:Linkedin Website -> whats his username
+2) Input validation 
+
+
+Input validation library -> Zod(Tell Zod the structure) -> Typescript first (schema validation)
+npm install zod  
+
+You are parsing the input from the end user 
+
+const schema=zod.object(
+    {
+        email:zod.string(),
+        password:zod.string(),
+        country:zod.literal("IN").or(z.literal("US"));
+    }
+)
+
+

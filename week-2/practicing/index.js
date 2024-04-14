@@ -1,20 +1,34 @@
 const express = require("express");
 const app = express();
 
-function sum(n) {
-  let ans = 0;
-  for (let i = 1; i <= n; i++) {
-    ans = ans + i;
-  }
-  return ans;
-}
+app.use();
+//get
+var users = [
+  {
+    name: "rahul",
+    kidneys: [
+      {
+        healthy: false,
+      },
+    ],
+  },
+];
+
 app.get("/", function (req, res) {
-  //res.send("Hello there I'm get function");
-  //for getting the query paramter
-  const n = req.query.n;
-  const ans = sum(n);
-  res.send("hi your ans is :" +ans);
-  
+  res.send("Going to get a checkup");
 });
 
+//post
+app.post("/name", function (req, res) {
+  const v = req.query.name;
+  res.send("This is a posting method" + v);
+});
+//put
+app.put("/put", function (req, res) {
+  res.send("This is a put method");
+});
+//delete
+app.delete("/delete", function (req, res) {
+  res.send("this is a delete method");
+});
 app.listen(3000);

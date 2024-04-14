@@ -1,1 +1,4 @@
-jhbdb dfbdjkk
+common async functions that JS provides: 
+setTimeout
+fs.readFile -> to read File from filesystem 
+Fetch -> to fetch some data from an API endpoint

@@ -1,0 +1,39 @@
+Components,State & re-rendering
+
+We need to take care of Components & State 
+Other things react will take care of 
+
+
+State -> JS object that represents the state of the app
+The dynamic things in your app(things that change)
+eg: Value of the counter
+
+Give the state & all individual components 
+
+npm run build -> HTML,css & JS  -> dist folder
+
+
+
+Initial code: 
+
+import { useState } from "react"
+
+//we have component called App
+function App() {
+  //define state variable
+  const [count,setCount] = useState(0); //wont watch the state
+
+  function counting(){
+    setCount(count+1)
+  }
+
+  return (
+    <div>
+      <button onClick={counting}>Counter {count}</button>
+    </div>
+  )
+}
+
+
+
+############################### Clean Code ###########################################

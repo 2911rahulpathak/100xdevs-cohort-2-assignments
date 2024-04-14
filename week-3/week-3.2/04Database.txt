@@ -12,7 +12,7 @@ Graph,vector,SQL(opensource codebases),Nosql
 for now NoSQL -> MongoDB
 
 MongoDB:
-1.create multiple databases
+1.create multiple databases  eg:  instagram -> user information db, photo db, friendship db
 2.In each database,create TABLES (collections)
 3. In each table, it lets you dump JSON data
 4. It's schemaless
